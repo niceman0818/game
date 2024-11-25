@@ -1,0 +1,187 @@
+/* styles.css 맨 위에 추가 */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: white;
+    font-size: 1.1rem; /* 전체 폰트 크기 약간 증가 */
+    font-weight: 500; /* 전체 텍스트 기본 두께 설정 */
+  }
+  
+  .container {
+    width: 90%; /* 화면 크기에 따라 적응 */
+    max-width: 1200px; /* 최대 너비 제한 */
+    margin: 0 auto; /* 중앙 정렬 */
+    padding: 2rem; /* 전체 여백 */
+    background-color: #1a202c;
+    overflow: hidden;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .header h1 {
+    font-size: 2rem; /* 제목 크기 증가 */
+    font-weight: 700; /* 제목 굵게 */
+    color: #ffffff;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap; /* 버튼 줄바꿈 가능 */
+    justify-content: center; /* 버튼 중앙 정렬 */
+  }
+  
+  button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* 아이콘과 텍스트 사이 간격 */
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #2d3748;
+    color: #d1d5db;
+    cursor: pointer;
+    font-size: 1rem; /* 버튼 텍스트 크기 */
+    font-weight: 600; /* 버튼 텍스트 굵기 */
+    min-width: 120px; /* 버튼 최소 크기 */
+  }
+  
+  button i {
+    font-size: 1.2rem; /* 아이콘 크기 */
+  }
+  
+  button:hover {
+    background-color: #4a5568;
+  }
+  
+  .search-bar {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: #2d3748;
+    color: #d1d5db;
+    font-size: 1rem; /* 검색창 텍스트 크기 증가 */
+    font-weight: 500; /* 검색창 텍스트 굵기 */
+  }
+  
+  .search-bar input:focus {
+    outline: 2px solid #3182ce;
+  }
+  
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 카드 최소 크기 증가 */
+    gap: 1.5rem; /* 카드 간격 증가 */
+    justify-content: center; /* 중앙 정렬 */
+  }
+  
+  .card {
+    background-color: #2d3748;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card img {
+    width: 100%; /* 너비를 카드 크기에 맞춤 */
+    height: 200px; /* 고정된 높이로 설정 */
+    object-fit: cover; /* 이미지를 잘라내지 않고 카드 영역에 맞춤 */
+    display: block; /* 이미지 아래 여백 문제 방지 */
+  }
+  
+  .card-content {
+    padding: 1.5rem; /* 내부 여백 증가 */
+    overflow: hidden; /* 넘치는 텍스트 숨김 */
+    text-overflow: ellipsis; /* 긴 텍스트 생략 처리 */
+  }
+  
+  .card-content h3 {
+    font-size: 1.4rem; /* 카드 제목 크기 */
+    font-weight: 700; /* 제목 굵기 */
+    margin-bottom: 0.9rem; /* 제목과 다음 요소 사이 간격 증가 */
+  }
+  
+  .card-content p {
+    font-size: 0.92rem; /* 카드 설명 크기 */
+    font-weight: 545; /* 텍스트 굵기 */
+    color: #d1d5db;
+    line-height: 1.4; /* 세로 간격 증가 */
+    margin-bottom: 0.9rem; /* 설명과 다음 요소 사이 간격 */
+  }
+  
+  .card-content .info {
+    display: flex;
+    gap: 0.5rem; /* 정보 내 항목 간격 */
+    font-size: 0.95rem; /* 정보 크기 */
+    font-weight: 500; /* 정보 텍스트 굵기 */
+    color: #a0aec0;
+    margin-bottom: 1rem; /* 정보와 다음 요소 사이 간격 */
+  }
+  
+  .card-content .info .rating {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .rating i {
+    color: #ffd700; /* 별 색상 (금색) */
+    font-size: 1rem; /* 별 크기 */
+    margin-right: 0rem; /* 별과 숫자 사이 간격 */
+  }
+  
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem; /* 패딩을 줄여 좁은 화면에서 내용 간격 확보 */
+    }
+  
+    .header h1 {
+      font-size: 1.5rem; /* 제목 크기 축소 */
+    }
+  
+    .buttons {
+        gap: 0.5rem; /* 버튼 간격 축소 */
+      }
+    
+      button {
+        font-size: 0.9rem; /* 버튼 텍스트 크기 축소 */
+        min-width: 100px; /* 버튼 최소 크기 축소 */
+      }
+  
+    .card-content h3 {
+      font-size: 1.2rem; /* 카드 제목 크기 축소 */
+    }
+  
+    .card-content p {
+        font-size: 0.9rem; /* 카드 설명 크기 축소 */
+        line-height: 1.6; /* 줄 간격 조정 */
+      }
+  }
+  
+  @media (min-width: 1440px) {
+    .container {
+      padding: 3rem; /* 더 넓은 패딩 */
+    }
+  
+    .card-grid {
+      gap: 2rem; /* 카드 간격 추가 증가 */
+    }
+  }
+  
